@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## Example
+http://vitessce.io/examples/
+https://codesandbox.io/s/9gt07?file=/src/styles.css
+
+## Reference
+http://vitessce.io/docs/
+
+
 In the project directory, you can run:
 
 ### `npm start`
