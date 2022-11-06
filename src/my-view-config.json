@@ -1,53 +1,85 @@
 {
     "version": "1.0.0",
-    "name": "Spraggins",
-    "description": "High Bit Depth (uint16) Multiplex Immunofluorescence Imaging",
+    "name": "Coordination Type: embeddingZoom",
+    "description": "Zoom levels in the scatterplots are coordinated.",
     "datasets": [
       {
-        "uid": "ffcf03be-a7da-4bf9-a648-3fc5c99604b2",
-        "name": "ffcf03be-a7da-4bf9-a648-3fc5c99604b2",
+        "uid": "A",
+        "name": "Codeluppi et al., Nature Methods 2018",
+        "description": "Spatial organization of the somatosensory cortex revealed by osmFISH",
         "files": [
           {
+            "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.cells.json",
+            "type": "cells",
+            "fileType": "cells.json"
+          },
+          {
+            "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.cell-sets.json",
+            "type": "cell-sets",
+            "fileType": "cell-sets.json"
+          },
+          {
+            "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.raster.json",
             "type": "raster",
-            "fileType": "raster.json",
-            "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/spraggins/spraggins.raster.json"
+            "fileType": "raster.json"
+          },
+          {
+            "url": "https://s3.amazonaws.com/vitessce-data/0.0.31/master_release/linnarsson/linnarsson.molecules.json",
+            "type": "molecules",
+            "fileType": "molecules.json"
           }
         ]
       }
     ],
-    "initStrategy": "auto",
     "coordinationSpace": {
-      "spatialZoom": {
-        "A": -6.5
+      "dataset": {
+        "A": "A"
       },
-      "spatialTargetX": {
-        "A": 20000
+      "embeddingType": {
+        "A": "t-SNE",
+        "B": "t-SNE"
       },
-      "spatialTargetY": {
-        "A": 20000
+      "embeddingZoom": {
+        "A": -1
       }
     },
     "layout": [
       {
-        "component": "spatial",
-        "x": 0,
-        "y": 0,
-        "w": 9,
-        "h": 2,
+        "component": "scatterplot",
         "coordinationScopes": {
-          "spatialZoom": "A",
-          "spatialTargetX": "A",
-          "spatialTargetY": "A"
-        }
+          "dataset": "A",
+          "embeddingType": "A",
+          "embeddingZoom": "A"
+        },
+        "x": 0, "y": 0, "w": 6, "h": 9
       },
       {
-        "component": "layerController",
-        "x": 9,
-        "y": 0,
-        "w": 3,
-        "h": 2,
-        "coordinationScopes": {}
+        "component": "scatterplot",
+        "coordinationScopes": {
+          "dataset": "A",
+          "embeddingType": "B",
+          "embeddingZoom": "A"
+        },
+        "x": 6, "y": 0, "w": 6, "h": 9
+      },
+      {
+        "component": "cellSets",
+        "coordinationScopes": {
+          "dataset": "A",
+          "embeddingType": "A",
+          "embeddingZoom": "A"
+        },
+        "x": 0, "y": 6, "w": 6, "h": 9
+      },
+      {
+        "component": "cellSetSizes",
+        "coordinationScopes": {
+          "dataset": "A",
+          "embeddingType": "B",
+          "embeddingZoom": "A"
+        },
+        "x": 6, "y": 6, "w": 6, "h": 9
       }
-    ]
+    ],
+    "initStrategy": "auto"
   }
-  

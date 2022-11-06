@@ -10,7 +10,8 @@ https://codesandbox.io/s/9gt07?file=/src/styles.css
 
 ## Reference
 http://vitessce.io/docs/
-
+# Data Type and File Types 
+http://vitessce.io/docs/data-types-file-types/
 
 In the project directory, you can run:
 
