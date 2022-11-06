@@ -1,7 +1,9 @@
-{
+const blinName = 'config-6-11-2022';
+const blinDescription = 'Example of OME-NGFF v0.1'
+export const viewConfig = {
   "version": "1.0.9",
-  "name": "My example config",
-  "description": "This demonstrates the JSON schema",
+  "name": blinName,
+  "description":blinDescription,
   "datasets": [
     {
       "uid": "D1",
